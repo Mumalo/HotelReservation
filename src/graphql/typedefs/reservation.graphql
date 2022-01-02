@@ -1,0 +1,16 @@
+type Reservation implements TimeStamps {
+    _id: ID!
+    room: Room!
+    user: User!
+    checkin: Date
+    checkout: Date
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input MakeReservationInput {
+    roomId: ID!
+    userId: ID!
+    checkin: String!
+    checkout: String!
+}

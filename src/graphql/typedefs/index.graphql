@@ -1,0 +1,22 @@
+scalar Date
+
+type Query {
+    users(pageData: PaginationInput): [User]!
+    login(email: String!, password: String!): AuthData
+
+    rooms(page: Int!): [Room]!
+    uers(page: Int!): [User]!
+    freeRooms(roomQuery: FreeRoomQuery!): [Room]!
+    activities(pageData: PaginationInput): [Activity]!
+    userReservations(userId: ID!, page: Int): [Reservation] #check how to use optional input
+    listReservations(page: Int): [Reservation]!
+}
+
+type Mutation {
+    signUp(userInput: CreateUserInput): User!
+    addRoom(roomInput: CreateRoomInput!): Room!
+    updateRoom(roomInput: UpdateRoomInput!, id: ID!): Room!
+    reserveRoom(reservationInput: MakeReservationInput!): Reservation!
+    checkoutUser(reservationId: ID!): Boolean!
+    updateUser(userInput: UpdateUserInput): User!
+}

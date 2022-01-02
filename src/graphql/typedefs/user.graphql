@@ -1,0 +1,24 @@
+type User implements TimeStamps {
+    _id: ID!,
+    firstname: String
+    lastname: String
+    email: String!
+    roles: [Role]
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input CreateUserInput {
+    email: String!
+    firstname: String
+    lastname: String
+    password: String
+    roles: [Authority]
+}
+
+input UpdateUserInput {
+    email: String
+    firstname: String
+    lastname: String
+    roles: [Authority]!
+}

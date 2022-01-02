@@ -1,0 +1,8 @@
+interface TimeStamps {
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input PaginationInput {
+    page: Int!
+}

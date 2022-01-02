@@ -1,0 +1,31 @@
+type Room  {
+    _id: ID!
+    roomPrice: Float!
+    roomType: RomType
+    isFree: Boolean
+    createdAt: Date
+    updatedAt: Date
+}
+
+input CreateRoomInput {
+    roomPrice: Float!
+    isFree: Boolean!
+    roomType: RomType!
+}
+
+input UpdateRoomInput {
+    roomPrice: Float
+    isFree: Boolean
+    roomType: RomType
+}
+
+input FreeRoomQuery {
+    checkin: String!
+    checkout: String!
+}
+
+enum RomType {
+    SINGLE
+    DOUBLE
+    PREMIUM
+}

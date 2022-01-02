@@ -1,0 +1,13 @@
+type Activity implements TimeStamps {
+    _id: ID!
+    title: String!
+    description: String!
+
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input CreateActivityInput {
+    title: String!
+    description: String!
+}

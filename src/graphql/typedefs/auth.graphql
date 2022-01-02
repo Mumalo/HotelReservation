@@ -1,0 +1,10 @@
+input LoginInput {
+    token: String!
+    user_id: String!
+}
+
+type AuthData {
+    token: String!
+    userId: String!
+    roles: [String]
+}

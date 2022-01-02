@@ -1,0 +1,13 @@
+type Role {
+    _id: ID!
+    authority: Authority!
+}
+
+input CreateRoleInput {
+    authority: [Authority]!
+}
+
+enum Authority {
+    ROLE_ADMIN
+    ROLE_USER
+}
